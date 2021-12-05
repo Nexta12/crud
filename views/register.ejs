@@ -1,0 +1,40 @@
+<%- include('./partials/header') %>
+    <!-- /nav -->
+
+
+<div class="container p-5" style="width: 600px;">
+
+    <h2 class="text-center">Register</h2>
+         <%- include('./partials/messages') %>
+    <form action="/register" method="POST">
+
+        <div class="mb-3 form-group">
+            <label for="username" class="form-label">Username</label>
+            <input type="username" class="form-control" id="username" name="username" required>
+
+        </div>
+        <div class="mb-3 form-group">
+            <label for="email" class="form-label">Email address</label>
+            <input type="email" class="form-control" id="email" name="email" required>
+
+        </div>
+        <div class="mb-3 form-group">
+            <label for="password" class="form-label">Password</label>
+            <input type="password" class="form-control" id="password" name="password" required>
+            <small style="font-style: italic; font-size: 10px;">Must contain an Uppercase, a number and a special character</small>
+        </div>
+        <div class="mb-3 form-group">
+            <label for="password" class="form-label">Confirm Password</label>
+            <input type="password" class="form-control" id="password2" name="password2" required>
+        </div>
+        <a href="/" class="btn btn-warning">Cancel</a>
+        <button type="submit" class="btn btn-primary">Register</button>
+    </form>
+    <p>Already have an account ? <a href="/login">Login</a></p>
+
+</div>
+
+
+
+
+<%- include('./partials/footer') %>
